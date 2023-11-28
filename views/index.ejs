@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Posts</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Instagram Posts</h1>
+    <%for(let i=posts.length-1;i>=0;i--){%>
+        <%let post=posts[i]%>
+        <div class="post">
+            <div class="user"><b>@<%=post.username%></b></div>
+            <img src="<%=post.imgUrl%>" alt="catImg" class="image">
+            <p class="caption"><%=post.content%></p>
+            
+            <!-- Edit Button -->
+            <form method="get" action="/posts/<%=post.id%>/postUpdate">
+                <button class="edit_button">
+                    <img src="/assets/edit_icon.png" alt="edit" class="edit_icon">
+                </button>
+            </form>
+
+            <!-- Remove Post Button -->
+            <form method="POST" action="/posts/<%=post.id%>?_method=DELETE">
+                <button class="delete_button">
+                    <img src="/assets/delete_icon.png" alt="delete" class="delete_icon">
+                </button>
+            </form>
+        </div>
+    <%}%>
+    <form action="/posts/newPost">
+        <button class="bottom-right-button">Add</button>
+    </form>
+</body>
+</html>
+

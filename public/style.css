@@ -1,0 +1,112 @@
+body{
+    background-color: #121212;
+    color:aliceblue
+}
+
+.post{
+    border:2px solid white;
+    color:white;
+    width:50%;
+    max-height: 600px;
+    padding:6px;
+    border-radius:25px;
+    margin:auto auto 20px auto;
+    font-size: 20px;
+    overflow-wrap: normal;
+    background-color: #212121;
+    transition-duration: 200ms;
+    position:relative;
+    overflow-y:auto;
+    
+
+}
+.post:hover{
+    box-shadow:0px 0px 15px white;
+}
+
+.image{
+    height:40%;
+    width:100%;
+    /* border:2px solid r; */
+    margin:auto;
+    border:2px solid black;
+}
+
+.user{
+    margin-bottom:30px;
+    font-size:30px;
+}
+/* .caption{
+    overflow-y:auto;
+    
+} */
+
+.bottom-right-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    /* padding: 10px 20px; */
+    background-color: black; /* Green background color */
+    color: white; /* White text color */
+    border: 2px solid greenyellow; /* Remove border */
+    height:50px;
+    text-align: center;
+    width:50px;
+    border-radius: 50%; /* Optional: Add rounded corners */
+    cursor: pointer; /* Add a pointer cursor on hover */
+}
+
+/* Optional: Style the button on hover */
+.bottom-right-button:hover {
+    background-color: #45a049;
+}
+
+.edit_button{
+    position:absolute;
+    top:20px;
+    right:20px;
+}
+.edit_icon{
+    height:15px;
+    width:15px;
+}
+
+.delete_button{
+    position: absolute;
+    top:20px;
+    right:60px;
+}
+.delete_icon{
+    height:15px;
+    width:15px;
+}
+
+/* For WebKit browsers (Chrome, Safari) */
+.post::-webkit-scrollbar {
+    width: 0px;
+}
+
+.post::-webkit-scrollbar-thumb {
+    background-color: #4CAF50; /* Green color for the thumb */
+    border-radius: 4px;
+}
+
+.post::-webkit-scrollbar-track {
+    background-color: #212121; /* Dark background color for the track */
+}
+
+/* For Firefox
+.post {
+    scrollbar-width: thin;
+    scrollbar-color: #4CAF50 #212121;
+} */
+
+/* Optional: Adjust the style of the scrollbar handle */
+.post:hover::-webkit-scrollbar-thumb {
+    background-color: #45a049;
+}
+
+/* Optional: Adjust the style of the scrollbar track */
+.post:hover::-webkit-scrollbar-track {
+    background-color: #333;
+}
