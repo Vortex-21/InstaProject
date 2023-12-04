@@ -12,11 +12,11 @@ body{
     border-radius:25px;
     margin:auto auto 20px auto;
     font-size: 20px;
-    overflow-wrap: normal;
     background-color: #212121;
     transition-duration: 200ms;
     position:relative;
-    overflow-y:auto;
+    overflow:hidden;
+    
     
 
 }
@@ -24,89 +24,115 @@ body{
     box-shadow:0px 0px 15px white;
 }
 
+.disp{
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+}
+
 .image{
-    height:40%;
+    height: 40%;
     width:100%;
-    /* border:2px solid r; */
+    /* border:2px solid #212121; */
     margin:auto;
-    border:2px solid black;
+    /* border:2px solid black; */
 }
 
 .user{
     margin-bottom:30px;
     font-size:30px;
+    font-size:1.75rem;
 }
 /* .caption{
     overflow-y:auto;
     
 } */
 
-.bottom-right-button {
+.add {
     position: fixed;
     bottom: 20px;
     right: 20px;
     /* padding: 10px 20px; */
     background-color: black; /* Green background color */
     color: white; /* White text color */
-    border: 2px solid greenyellow; /* Remove border */
+    border: 2px solid white; /* Remove border */
     height:50px;
     text-align: center;
     width:50px;
-    border-radius: 50%; /* Optional: Add rounded corners */
+    border-radius: 50%; 
     cursor: pointer; /* Add a pointer cursor on hover */
 }
 
-/* Optional: Style the button on hover */
-.bottom-right-button:hover {
+
+.add:hover {
     background-color: #45a049;
 }
 
-.edit_button{
+.signup {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    /* padding: 10px 20px; */
+    background-color: black; /* Green background color */
+    color: white; /* White text color */
+    border: 2px solid white; /* Remove border */
+    height:50px;
+    text-align: center;
+    width:50px;
+    border-radius: 50%; 
+    cursor: pointer; 
+}
+
+
+.signup:hover {
+    background-color: #45a049;
+}
+
+.utility{
     position:absolute;
-    top:20px;
+    /* min-width: 85px; */
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    top:15px;
     right:20px;
 }
-.edit_icon{
-    height:15px;
-    width:15px;
+
+@media (max-width: 768px) {
+    .utility {
+        top: 40px; /* Remove fixed top position */
+        /*bottom: 15px; /* Set bottom position */
+        right: 15px; /* Adjust right position */
+    }
 }
 
-.delete_button{
-    position: absolute;
-    top:20px;
-    right:60px;
-}
-.delete_icon{
-    height:15px;
-    width:15px;
-}
-
-/* For WebKit browsers (Chrome, Safari) */
-.post::-webkit-scrollbar {
-    width: 0px;
-}
-
-.post::-webkit-scrollbar-thumb {
-    background-color: #4CAF50; /* Green color for the thumb */
-    border-radius: 4px;
-}
-
-.post::-webkit-scrollbar-track {
-    background-color: #212121; /* Dark background color for the track */
-}
-
-/* For Firefox
-.post {
-    scrollbar-width: thin;
-    scrollbar-color: #4CAF50 #212121;
+/* .edit_button{
+    position:absolute;
+    top:10px;
+    right:10px;
 } */
-
-/* Optional: Adjust the style of the scrollbar handle */
-.post:hover::-webkit-scrollbar-thumb {
-    background-color: #45a049;
+.edit_icon{
+    height:20px;
+    width:20px;
 }
 
-/* Optional: Adjust the style of the scrollbar track */
-.post:hover::-webkit-scrollbar-track {
-    background-color: #333;
+/* .delete_button{
+    position: absolute;
+    top:10px;
+    right:50px;
+} */
+.delete_icon{
+    height:20px;
+    width:20px;
+    margin-left:10px;
 }
+#deleteForm{
+    display: inline-block;
+}
+#editForm{
+    display:inline-block;
+}
+.post.expanded{
+    max-height: none;
+}
+

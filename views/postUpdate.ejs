@@ -6,11 +6,13 @@
     <title>Edit Post</title>
 </head>
 <body>
-    <h1><%=post.id%></h1>
+    <h1>PostId : <%=post.id%></h1>
     <form method="POST" action="/posts/<%=post.id%>?_method=PATCH">
         <textarea name="newImgUrl"><%=post.imgUrl%></textarea><br>
-        <textarea name="newContent" id="content"><%=post.content%></textarea>
-        <button>Add Post</button>
+        <textarea name="newContent" id="content"><%=post.content%></textarea><br>
+        <input type="password" name="password" placeholder="Enter Password">
+
+        <button>Submit</button>
     </form>
 </body>
 </html>
