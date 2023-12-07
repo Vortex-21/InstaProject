@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Post</title>
+    <link rel="stylesheet" href="/style2.css">
 </head>
 <body>
-    <form method="POST" action="/posts">
-        <input type="text" placeholder="Enter your username" name="username"><br>
-        <input type="text" placeholder="Enter image url" name="imgUrl"><br>
-        <textarea name="content" id="content" placeholder="What's on your mind today?"></textarea>
-        <input type="password" name="password" placeholder="Enter password">
-        <button>Add Post</button>
-    </form>
+    <div class="userInput">
+        <form method="POST" action="/posts">
+            <input type="text" placeholder="Enter your username" name="username" class="inputs"><br>
+            <input type="text" placeholder="Enter image url" name="imgUrl" class="inputs"><br>
+            <textarea name="content" id="content" placeholder="What's on your mind today?" class="inputs"></textarea><br>
+            <input type="password" name="password" placeholder="Enter password" class="inputs"><br>
+            <button class="submit">Add Post</button>
+        </form>
+    </div>
 </body>
 </html>

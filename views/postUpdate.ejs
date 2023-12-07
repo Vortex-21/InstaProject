@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Post</title>
+    <link rel="stylesheet" href="/style2.css">
 </head>
 <body>
     <h1>PostId : <%=post.id%></h1>
-    <form method="POST" action="/posts/<%=post.id%>?_method=PATCH">
-        <textarea name="newImgUrl"><%=post.imgUrl%></textarea><br>
-        <textarea name="newContent" id="content"><%=post.content%></textarea><br>
-        <input type="password" name="password" placeholder="Enter Password">
-
-        <button>Submit</button>
-    </form>
+    <div class="userInput">
+        <form method="POST" action="/posts/<%=post.id%>?_method=PATCH">
+            <textarea name="newImgUrl" class="inputs"><%=post.imgUrl%></textarea><br>
+            <textarea name="newContent" id="content" class="inputs"><%=post.content%></textarea><br>
+            <input type="password" name="password" placeholder="Enter Password" class="inputs">
+            <br>
+            <button class="submit">Submit</button>
+        </form>
+    </div>
 </body>
 </html>

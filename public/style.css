@@ -7,10 +7,10 @@ body{
     border:2px solid white;
     color:white;
     width:50%;
-    max-height: 600px;
+    max-height: 900px;
     padding:6px;
     border-radius:25px;
-    margin:auto auto 20px auto;
+    margin:auto auto 50px auto;
     font-size: 20px;
     background-color: #212121;
     transition-duration: 200ms;
@@ -24,11 +24,11 @@ body{
     box-shadow:0px 0px 15px white;
 }
 
-.disp{
+/* .disp{
     display:flex;
     flex-direction:row;
-    flex-wrap: wrap;
-}
+    flex-wrap: wrap; */
+/* } */
 
 .image{
     height: 40%;
@@ -40,13 +40,12 @@ body{
 
 .user{
     margin-bottom:30px;
-    font-size:30px;
+    /* font-size:30px; */
+    font-size:2rem;
+}
+.caption{
     font-size:1.75rem;
 }
-/* .caption{
-    overflow-y:auto;
-    
-} */
 
 .add {
     position: fixed;
@@ -56,11 +55,12 @@ body{
     background-color: black; /* Green background color */
     color: white; /* White text color */
     border: 2px solid white; /* Remove border */
-    height:50px;
+    height:70px;
     text-align: center;
-    width:50px;
+    width:70px;
     border-radius: 50%; 
     cursor: pointer; /* Add a pointer cursor on hover */
+    font-size:1rem;
 }
 
 
@@ -70,17 +70,18 @@ body{
 
 .signup {
     position: fixed;
-    bottom: 80px;
+    bottom: 100px;
     right: 20px;
     /* padding: 10px 20px; */
     background-color: black; /* Green background color */
     color: white; /* White text color */
     border: 2px solid white; /* Remove border */
-    height:50px;
+    height:70px;
     text-align: center;
-    width:50px;
+    width:70px;
     border-radius: 50%; 
     cursor: pointer; 
+    font-size:1rem; 
 }
 
 
@@ -91,9 +92,9 @@ body{
 .utility{
     position:absolute;
     /* min-width: 85px; */
-    display:flex;
+    /* display:flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: wrap; */
     top:15px;
     right:20px;
 }
@@ -112,8 +113,8 @@ body{
     right:10px;
 } */
 .edit_icon{
-    height:20px;
-    width:20px;
+    height:30px;
+    width:30px;
 }
 
 /* .delete_button{
@@ -122,9 +123,12 @@ body{
     right:50px;
 } */
 .delete_icon{
-    height:20px;
-    width:20px;
+    height:30px;
+    width:30px;
     margin-left:10px;
+}
+.options{
+    text-decoration: none;
 }
 #deleteForm{
     display: inline-block;

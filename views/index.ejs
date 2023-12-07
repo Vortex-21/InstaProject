@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
-    <h1>Post It!</h1>
+    <h1 style="font-size:50px;">Post It!</h1>
     <%for(let i=posts.length-1;i>=0;i--){%> <%let post=posts[i]%>
     <div class="post" onclick="togglePostHeight(this)">
       <div class="disp">
@@ -18,12 +18,12 @@
         <div class="utility">
             
             <!-- Edit option -->
-            <a href="/posts/<%=post.id%>/postUpdate">
+            <a href="/posts/<%=post.id%>/postUpdate" class="options">
                 <img src="/assets/edit_icon3.png" alt="edit" class="edit_icon" />
             </a>
 
             <!-- Delete option -->
-            <a href="/posts/<%=post.id%>/deletePost">
+            <a href="/posts/<%=post.id%>/deletePost" class="options">
                 <img src="/assets/delete_icon3.png" alt="delete" class="delete_icon"/>
             </a>
         </div>
@@ -34,7 +34,7 @@
     <%}%>
     <!-- Add a new Post -->
     <form action="/posts/newPost">
-      <button class="add">Add</button>
+      <button class="add">New Post</button>
     </form>
 
     <!-- Sign Up -->

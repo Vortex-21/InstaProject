@@ -4,11 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Authentication</title>
+    <link rel="stylesheet" href="/style2.css">
   </head>
   <body>
-    <form method="POST" action="/posts/<%=id%>?_method=DELETE">
-        <input type="password" placeholder="Enter Password" name="password"/>
-        <button>Submit</button>
+    <div class="userInput">
+      <form method="POST" action="/posts/<%=id%>?_method=DELETE">
+        <input type="password" placeholder="Enter Password" name="password" class="inputs"/>
+        <button class="submit">Submit</button>
     </form>
+    </div>
   </body>
 </html>

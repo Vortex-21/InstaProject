@@ -45,7 +45,7 @@ app.get("/posts/newPost",(req,res)=>{
     res.render("addPost.ejs");
 });
 app.post("/posts",(req,res)=>{
-    console.log("body:",req.body);
+    // console.log("body:",req.body);
     // res.render("index.ejs");
     let {username,imgUrl,content,password}=req.body;
     //Checking if user is registered or not
@@ -65,6 +65,7 @@ app.post("/posts",(req,res)=>{
                 else{
                     let id=uuidv4();
                     posts.push({id,username,imgUrl,content});
+                    // console.log(posts);
                     res.redirect("/posts");
                 }
             }
@@ -185,7 +186,13 @@ app.post("/posts/signUp",(req,res)=>{
                 // console.log(result);
                 // res.send("Working Fine!");
                 if(result.length!=0){
-                    res.send("Username Unavailable");
+                    if(result[0]["password"] == password){
+                        res.send("You Already have an account!");
+                    }
+                    else{
+
+                        res.send("Username Unavailable");
+                    }
                 }
                 else{
                     //Enter the data into the database.

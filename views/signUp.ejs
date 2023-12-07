@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SignUp</title>
+    <link rel="stylesheet" href="/style2.css">
 </head>
 <body>
-    <form method="post" action="/posts/signUp">
-        <input type="text" placeholder="Enter Username" name="username">
-        <input type="password" placeholder="Enter Password" name="password">
-        <button>Submit</button>
-    </form>
+    <div class="userInput">
+        <h1 style="text-align:center;">SignUp</h1>
+        <form method="post" action="/posts/signUp">
+            <input type="text" placeholder="Enter Username" name="username" class="inputs">
+            <input type="password" placeholder="Enter Password" name="password" class="inputs">
+            <button class="submit">Submit</button>
+        </form>
+    </div>
 </body>
 </html>
