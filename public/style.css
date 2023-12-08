@@ -24,18 +24,13 @@ body{
     box-shadow:0px 0px 15px white;
 }
 
-/* .disp{
-    display:flex;
-    flex-direction:row;
-    flex-wrap: wrap; */
-/* } */
+
 
 .image{
     height: 40%;
     width:100%;
-    /* border:2px solid #212121; */
     margin:auto;
-    /* border:2px solid black; */
+    
 }
 
 .user{
@@ -49,17 +44,17 @@ body{
 
 .add {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    top:35px;
+    right: 100px;
     /* padding: 10px 20px; */
-    background-color: black; /* Green background color */
-    color: white; /* White text color */
-    border: 2px solid white; /* Remove border */
+    background-color: black; 
+    color: white; 
+    border: 2px solid white; 
     height:70px;
     text-align: center;
     width:70px;
     border-radius: 50%; 
-    cursor: pointer; /* Add a pointer cursor on hover */
+    cursor: pointer; 
     font-size:1rem;
 }
 
@@ -70,12 +65,12 @@ body{
 
 .signup {
     position: fixed;
-    bottom: 100px;
+    top: 35px;
     right: 20px;
-    /* padding: 10px 20px; */
-    background-color: black; /* Green background color */
-    color: white; /* White text color */
-    border: 2px solid white; /* Remove border */
+    
+    background-color: black; 
+    color: white; 
+    border: 2px solid white; 
     height:70px;
     text-align: center;
     width:70px;
@@ -91,51 +86,78 @@ body{
 
 .utility{
     position:absolute;
-    /* min-width: 85px; */
-    /* display:flex;
-    flex-direction: row;
-    flex-wrap: wrap; */
+    
     top:15px;
     right:20px;
 }
 
-@media (max-width: 768px) {
-    .utility {
-        top: 40px; /* Remove fixed top position */
-        /*bottom: 15px; /* Set bottom position */
-        right: 15px; /* Adjust right position */
-    }
-}
-
-/* .edit_button{
-    position:absolute;
-    top:10px;
-    right:10px;
-} */
 .edit_icon{
     height:30px;
     width:30px;
 }
-
-/* .delete_button{
-    position: absolute;
-    top:10px;
-    right:50px;
-} */
 .delete_icon{
     height:30px;
     width:30px;
     margin-left:10px;
 }
+
+@media (max-width: 768px) {
+    
+
+    .post{
+        width:100%;
+        max-height:500px;
+        /* display:block; */
+        box-shadow: none;
+        margin-left: 0px;
+    }
+}
+@media (max-width: 300px) {
+    
+
+    .post{
+        margin-top:100px;
+        width:100%;
+        max-height:500px;
+        /* display:block; */
+        box-shadow: none;
+        margin-left: 0px;
+    }
+    .user{
+        font-size:10vw;
+    }
+
+    .edit_icon{
+        height:5vw;
+        width:5vw;
+    }
+
+    .delete_icon{
+        height:5vw;
+        width:5vw;
+        margin-left:1vw;
+    }
+
+    .add{
+        top:90px;
+        left:0px;
+        height:50px;
+        width:50px;
+    }
+
+    .signup{
+        top:90px;
+        left:60px;
+        height:50px;
+        width:50px;
+    }
+}
+
+
 .options{
     text-decoration: none;
 }
-#deleteForm{
-    display: inline-block;
-}
-#editForm{
-    display:inline-block;
-}
+
 .post.expanded{
     max-height: none;
 }
